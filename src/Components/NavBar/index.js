@@ -1,11 +1,13 @@
 import styles from './NavBar.module.scss'
+import Busca from 'Components/Busca'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import classNames from 'classnames'
-import { 
-  RiShoppingCartLine, 
-  RiShoppingCartFill 
+import {
+  RiShoppingCartLine,
+  RiShoppingCartFill
 } from 'react-icons/ri'
-import Busca from 'Components/Busca'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
+
 
 export default function NavBar() {
   const iconeProps = {
@@ -13,27 +15,30 @@ export default function NavBar() {
     size: 24,
   }
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <nav className={styles.nav}>
-      <Logo className={styles.logo} />
+      <Logo className={styles.logo} onClick={() => navigate('/') }/>
       <div className={styles.link}>
         <div>
-          <a href='/' className={classNames(styles.link, {
-            [styles.selected]: window.location.pathname === '/'
+          <Link to='/' className={classNames(styles.link, {
+            [styles.selected]: location.pathname === '/'
           })}>
             Pagina inicial
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.busca}>
-        <Busca/>
+        <Busca />
       </div>
       <div className={styles.icones}>
-        <a href='/carrinho'>
-          { window.location.pathname === '/carrinho' 
-            ? <RiShoppingCartFill {...iconeProps} /> :<RiShoppingCartLine {...iconeProps} />
-        }
-        </a>
+        <Link to='/carrinho'>
+          {location.pathname === '/carrinho'
+            ? <RiShoppingCartFill {...iconeProps} /> : <RiShoppingCartLine {...iconeProps} />
+          }
+        </Link>
       </div>
     </nav>
   )

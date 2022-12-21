@@ -1,3 +1,17 @@
+# Sobre o projeto 
+
+TratoTec, uma loja virtual para compras diversas. A loja deverá possuir catálago, filtragem de produtos, adição de produtos ao carrinho onde nele devem possuir quantidade, valor e subtotal. 
+
+# Tecnologias e funcionalidades
+
+### Tecnologias
+✔️ ReactJS e create-react-app;
+✔️ Redux;
+✔️ react-router-dom;  
+
+### Funcionalidades 
+
+Manipulação de estados globais utilizando reducers por meio de uma store com esses estados, podendo favoritar ou adicionar ao carrinho, passando as propriedes para os componentes onde os mesmos apresentam o estado global do reducer. 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

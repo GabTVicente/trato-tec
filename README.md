@@ -5,9 +5,9 @@ TratoTec, uma loja virtual para compras diversas. A loja deverá possuir catála
 # Tecnologias e funcionalidades
 
 ### Tecnologias
-✔️ ReactJS e create-react-app;
-✔️ Redux;
-✔️ react-router-dom;  
+<p>✔️ ReactJS e create-react-app;</p>
+<p>✔️ Redux;</p>
+<p>✔️ react-router-dom;</p>  
 
 ### Funcionalidades 
 
